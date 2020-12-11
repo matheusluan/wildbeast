@@ -343,3 +343,89 @@ img {
     color: #fff;
 }
 
+@media screen and ( max-width: 1280px){
+ 
+    .layout{
+        width: 100%;
+        background-color: #FAFBFC;
+        display: grid;
+        grid-template-areas: 
+        "header     header     header"
+        "conteudo   conteudo   nav_lateral"
+        "conteudo   conteudo   anuncios"
+        "footer     footer     footer"
+        ;
+    }
+.layout .header{
+  
+    display: grid;
+    grid-template-areas: 
+    "logo menu_header"
+    ;
+    justify-content: space-around;
+    align-content: center;
+
+
+}
+.layout .explanacao{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "lobo1     texto_roxo"
+        "lobo1     lobo2"
+        "texto1    texto2"
+    ;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+    }
+    
+    .anuncios{
+       display: grid;
+       grid-template-rows: 1fr 1fr;
+       justify-content: space-evenly;
+       align-items: flex-end;
+       margin: 0;
+    }
+  
+}
+@media screen and ( max-width: 870px){
+
+    .layout .explanacao{
+
+        display: grid;
+        grid-template-rows: 1.5fr 0.3fr 1.5fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "lobo1"
+            "texto_roxo"
+            "lobo2"
+            "texto1"
+            "texto2"
+        ;
+        row-gap: 10px;
+        align-items: center;
+    }
+    .layout .explanacao .lobo1{
+        grid-area: lobo1;
+        width: 100%;
+        min-height: 350px;
+    }
+    .anuncios img{
+        display:block;
+        margin: 0 10px;
+        width: 150px;
+        height: 40px;
+     }
+     .layout .detalhes{
+        margin: 30px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+       
+        column-gap: 30px;
+        min-height: 350px;
+    }
+    .layout .detalhes .texto_datalhes {
+        margin-top: 15px;
+    }
+}
