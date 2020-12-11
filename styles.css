@@ -21,10 +21,15 @@ a {
 }
 
 img {
-  display: block;
+ 
   border-radius: 5px;
   height: 50px;
   widows: 50px;
+  transition: 0.6s;
+  cursor: zoom-in;
+}
+img:hover{
+    transform: scale(1.2);
 }
 
 /* LAYOUT MACRO DA PÁGINA*/
@@ -118,6 +123,7 @@ img {
 .layout .nav_lateral .icone img{
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
 
 .layout .conteudo{
@@ -183,7 +189,11 @@ img {
     border-radius: 5px 5px 0 0;
     align-self: center;
     background: linear-gradient(135deg, #8844ee, #B07DFB);
+    transition: 0.6s;
     
+}
+.layout .conteudo .introducao .card .card_style h1:hover{
+    color: #FFF;
 }
 .layout .conteudo .introducao .card .card_style p{
     display: flex;
@@ -318,18 +328,24 @@ img {
     margin: 30px 0;
     width: 100%;
     height: 100%;
+
 }
 .layout .anuncios{
+    margin: 30px 0;
     grid-area: anuncios;
-    min-width: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    max-width: 300px;
+    row-gap: 30px;
 
-    margin: 30px auto;
 }
 .layout .anuncios img{
-    margin-bottom: 30px;
     width:250px;
     height:200px;
     box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+  
 }
 .layout .footer{
     grid-area: footer;
@@ -402,6 +418,7 @@ img {
             "lobo2"
             "texto1"
             "texto2"
+          
         ;
         row-gap: 10px;
         align-items: center;
@@ -411,12 +428,7 @@ img {
         width: 100%;
         min-height: 350px;
     }
-    .anuncios img{
-        display:block;
-        margin: 0 10px;
-        width: 150px;
-        height: 40px;
-     }
+     
      .layout .detalhes{
         margin: 30px 0;
         display: grid;
@@ -428,4 +440,5 @@ img {
     .layout .detalhes .texto_datalhes {
         margin-top: 15px;
     }
+   
 }
